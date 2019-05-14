@@ -23,29 +23,5 @@ namespace looper_practice.Models
         public string url { get; set; } // the hypermedia URL of this resource.
         public string created { get; set; } // the ISO 8601 date format of the time that this resource was created.
         public string edited { get; set; } // the ISO 8601 date format of the time that this resource was edited.
-
-        //public Person()
-        //{
-        //    name = "";
-        //    birth_year = "";
-        //    eye_color = "";
-        //    gender = "";
-        //    hair_color = "";
-        //    height = "";
-        //    mass = "";
-        //    skin_color = "";
-        //    homeworld = "";
-        //    films = new string[8];
-        //    films[0] = "This asset appears in zero films.";
-        //    species = new string[8];
-        //    species[0] = "This asset has no species.";
-        //    starships = new string[8];
-        //    starships[0] = "No starships belong to this asset.";
-        //    vehicles = new string[1];
-        //    vehicles[0] = "No vehicles belong to this asset.";
-        //    url = "This is not the URL that you are looking for.";
-        //    created = "If it does not appear in the SWAPI, it doesn't exist!";
-        //    edited = "Move along!";
-        //}
     }
 }
