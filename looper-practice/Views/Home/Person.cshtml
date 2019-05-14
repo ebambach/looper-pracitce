@@ -1,0 +1,192 @@
+﻿@model looper_practice.Models.Person
+
+@{
+    ViewBag.Title = "Person";
+}
+
+<h2>View</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birth_year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birth_year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eye_color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eye_color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hair_color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hair_color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.skin_color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.skin_color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.homeworld)
+        </dt>
+
+        <dd>
+            <a>@Html.DisplayFor(model => model.homeworld)</a>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.url)
+        </dt>
+
+        <dd>
+            <a>@Html.DisplayFor(model => model.url)</a>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.films)
+        </dt>
+        @if (Model.films[0] != "N/A")
+        {
+            for (var counter = 0; counter < Model.films.Length; counter++)
+            {
+                <dd>
+                    <a>@Html.DisplayFor(model => model.films[counter])</a>
+                </dd>
+            }
+        }
+        else
+        {
+            <dd>
+                This character appears in zero films.
+            </dd>
+        }
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.species)
+        </dt>
+        @if (Model.species[0] != "N/A")
+        {
+            for (var counter = 0; counter < Model.species.Length; counter++)
+            {
+                <dd>
+                    <a>@Html.DisplayFor(model => model.species[counter])</a>
+                </dd>
+            }
+        }
+        else
+        {
+            <dd>
+                This character is not a member of a species.
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.starships)
+        </dt>
+        @if (Model.starships[0] != "N/A")
+        {
+            for (var counter = 0; counter < Model.starships.Length; counter++)
+            {
+                <dd>
+                    <a>@Html.DisplayFor(model => model.starships[counter])</a>
+                </dd>
+            }
+        }
+        else
+        {
+            <dd>
+                This character does not own any starships.
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicles)
+        </dt>
+
+        @if (Model.vehicles[0] != "N/A")
+        {
+            for (var counter = 0; counter < Model.vehicles.Length; counter++)
+            {
+                <dd>
+                    <a>@Html.DisplayFor(model => model.vehicles[counter])</a>
+                </dd>
+            }
+        }
+        else
+        {
+            <dd>
+                This character does not own any vehicles.
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edited)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
